@@ -1,0 +1,45 @@
+$hectorite: rgba(240, 229, 210, 0.32);
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.container__playground {
+  @include flexCenter;
+  height: 300px;
+  flex-direction: column;
+  width: 500px;
+  background-color: $hectorite;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.container__options {
+  margin: 20px;
+}
+
+.container__listContainer {
+  @include flexCenter;
+  margin-top: 30px;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center
+}
+
+.container__title {
+  margin-bottom: 60px;
+}
+
+.item {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.active {
+  color: #b42424;
+}

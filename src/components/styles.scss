@@ -1,0 +1,76 @@
+@mixin type($color) {
+  border: 1px solid $color;
+  background-color: $color;
+}
+
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
+
+.min {
+  height: 30px;
+  width: 100px;
+}
+
+.large {
+  height: 50px;
+  width: 200px;
+  font-size: 23px;
+}
+
+.block {
+  width: 100%;
+}
+
+.outlined {
+  color: black;
+  background-color: transparent!important;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #fff;
+  border-top-color: #333;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.primary {
+  @include type(#2385a9)
+}
+
+.danger {
+  @include type(#b42424)
+}
+
+.success {
+  @include type(#1a9861)
+}
+
+.warning {
+  @include type(#eabc4e)
+}
